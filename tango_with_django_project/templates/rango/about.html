@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    
+    <head>
+        <title>Rango - About</title>
+    </head>
+    
+    
+    <body>
+        <h1 class="page-header">ABOUT</h1>
+        This tutorial has been put together by: Shi Min
+        <div>
+            <a href="/rango/">Home</a><br />
+       </div>     
+        <!-- Image-->
+        <img src="{% static "images/rango_about.jpg" %}" width="800" height="400"
+            alt="Picture of Rango_1" />
+         
+        <img src="{{MEDIA_URL}}cat.jpg" width="500" height="250" 
+            alt="Picture of Cat."  />
+
+    </body>
+    
+</html>
