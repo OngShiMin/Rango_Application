@@ -2,7 +2,15 @@
 {% load staticfiles %}
 {% block body_block %}
         <h1>Rango says...</h1>
-        <div>hey there partner! <br /></div>
+        
+        <div>
+        {% if user.is_authenticated %}
+            howdy {{ user.username }}!
+        {% else %}
+            hey there partner!
+        {% endif %}
+        </div>
+        
         <div>
 			<div>
 				<h4>Most Liked Categories</h4>
@@ -42,7 +50,7 @@
 
 		</div>
         <div>
-		    <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
+		    <img src="{% static 'images/rango.jpg' %}" width="800" height="400" alt="Picture of Rango" />
         </div>
         
         {% endblock %}
