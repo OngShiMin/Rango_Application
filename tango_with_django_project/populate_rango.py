@@ -14,18 +14,18 @@ def populate():
     # through each data structure, and add the data to our models.
     
     python_pages = [
-        {"title": "Official Python Tutorial", "url":"http://docs.python.org/2/tutorial/"},
-        {"title":"How to Think like a Computer Scientist", "url":"http://www.greeteapress.com/thinkpython/"},
-        {"title":"Learn Python in 10 Minutes", "url":"http://www.korokithakis.net/tutorials/python/"} ]
+        {"title": "Official Python Tutorial", "url":"http://docs.python.org/2/tutorial/", "views": 43, "likes": 24},
+        {"title":"How to Think like a Computer Scientist", "url":"http://www.greeteapress.com/thinkpython/", "views": 52, "likes": 31},
+        {"title":"Learn Python in 10 Minutes", "url":"http://www.korokithakis.net/tutorials/python/", "views": 20, "likes": 14} ]
     
     django_pages = [
-        {"title":"Official Django Tutorial", "url":"https://docs.djangoproject.com/en/1.9/intro/tutorial101/"},
-        {"title":"Django Rocks", "url":"http://www.djangorocks.com/"},
-        {"title":"How to Tango with Django", "url":"http://www.tangowithdjango.com/"} ]
+        {"title":"Official Django Tutorial", "url":"https://docs.djangoproject.com/en/1.9/intro/tutorial101/", "views": 43, "likes": 24},
+        {"title":"Django Rocks", "url":"http://www.djangorocks.com/", "views": 33, "likes": 20},
+        {"title":"How to Tango with Django", "url":"http://www.tangowithdjango.com/", "views": 40, "likes": 14} ]
     
     other_pages = [
-        {"title":"Bottle", "url":"http://bottlepy.org/docs/dev/"},
-        {"title":"Flask", "url":"http://flask.pocoo.org"} ]
+        {"title":"Bottle", "url":"http://bottlepy.org/docs/dev/", "views": 23, "likes": 10},
+        {"title":"Flask", "url":"http://flask.pocoo.org", "views": 13, "likes": 5} ]
     
     cats = {"Python": {"pages": python_pages, "views": 128, "likes": 42},
             "Django":{"pages": django_pages, "views": 64, "likes": 32},
