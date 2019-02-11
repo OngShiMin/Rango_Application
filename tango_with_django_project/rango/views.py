@@ -87,7 +87,7 @@ def add_page(request, category_name_slug):
                 page.views = 0
                 page.save()
                 
-            return show_category(request, category_name_slug)
+                return show_category(request, category_name_slug)
             
         else:
             print(form.errors)
@@ -109,6 +109,7 @@ def register(request):
             
             profile = profile_form.save(commit=False)
             profile.user = user
+            
             if 'picture' in request.FILES:
                 profile.picture = request.FILES['picture']
             profile.save()
@@ -132,7 +133,6 @@ def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        
         user = authenticate(username=username, password=password)
         
         if user:
@@ -140,7 +140,7 @@ def user_login(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse('index'))
             else:
-                return HttpResponse("Your Rango account is disabled")
+                return HttpResponse("Your Rango account is disabled.")
         else:
             print("Invalid login details: {0}, {1}".format(username, password))
             return HttpResponse("Invalid login details supplied.")
@@ -162,6 +162,7 @@ def restricted(request):
     return render(request, 'rango/restricted.html', {})
 
 
+@login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
