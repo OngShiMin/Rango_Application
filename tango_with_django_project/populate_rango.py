@@ -27,7 +27,7 @@ def populate():
         {"title":"Bottle", "url":"http://bottlepy.org/docs/dev/", "views": 23, "likes": 10},
         {"title":"Flask", "url":"http://flask.pocoo.org", "views": 13, "likes": 5} ]
     
-    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 42},
+    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
             "Django":{"pages": django_pages, "views": 64, "likes": 32},
             "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16} }
     
